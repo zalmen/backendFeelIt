@@ -37,7 +37,7 @@ export default function Login() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "2rem" }}>
-      <h2>Sign In Page</h2>
+      <h2>Sign In</h2>
       {error && (
         <p style={{ color: "#dc2626", marginBottom: "1rem" }}>{error}</p>
       )}
@@ -64,7 +64,7 @@ export default function Login() {
           />
         </div>
         <button type="submit" disabled={loading}>
-          {loading ? "Signing in…" : "Login"}
+          {loading ? "Signing in…" : "Sign in"}
         </button>
       </form>
     </div>
