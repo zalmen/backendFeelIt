@@ -53,7 +53,7 @@ This tenet has specific implications for how users can communicate:
 
 ---
 
-## Daily Check-In
+## Welcome Screen
 
 **Trigger:** First app open of the day
 
@@ -63,7 +63,7 @@ This tenet has specific implications for how users can communicate:
 - Prompt the user with **at most 3 basic questions**
 - Questions should be simple and appropriate for children under 10
 
-**Post-check-in:** Where the user lands after completing the daily check-in is **not yet decided**. See Open Questions below.
+**Post-welcome:** Where the user lands after completing the Welcome screen is **not yet decided**. See Open Questions below.
 
 ---
 
@@ -111,12 +111,12 @@ This tenet has specific implications for how users can communicate:
 The following decisions are not yet finalized and require further discussion.
 
 ### Navigation & Information Architecture
-- **Post-check-in landing:** What screen does the user see after completing the daily check-in?
+- **Post-welcome landing:** What screen does the user see after completing the Welcome screen?
 - **Full in-app navigation:** How do users move between screens? What's the primary navigation model?
 - **Information architecture:** How are features organized and discovered?
 
-### Daily Check-In Content
-- **Exact questions:** What specific questions are asked during the daily check-in?
+### Welcome Screen Content
+- **Exact questions:** What specific questions are asked on the Welcome screen?
 - **Question format:** Multiple choice? Emoji-based? Slider scales?
 - **Personalization:** Do questions adapt based on previous answers or user history?
 
@@ -140,11 +140,11 @@ The following decisions are not yet finalized and require further discussion.
 
 ## Mockups
 
-### Daily Check-In
+### Welcome Screen
 
 First-open-of-day mood prompt ("How are you today?", screen 1 of 3). Users select from structured mood options: Good, Okay, or Not great.
 
-![Daily Check-In](mocks/daily-checkin.png)
+![Welcome Screen](mocks/welcome-screen.png)
 
 ### Community Feed (Survey)
 
@@ -160,4 +160,4 @@ Safe place for sharing anonymous stories about unpleasant experiences. Shows sto
 
 ### Still to be designed
 
-- **Post-Check-In Landing** — Home screen after daily check-in (design pending decision on navigation)
+- **Post-Welcome Landing** — Home screen after the Welcome screen (design pending decision on navigation)
