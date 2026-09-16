@@ -1,8 +1,6 @@
 # FeelIt Product Brief
 
-This document captures the product pivot definition for FeelIt—an app supporting kids under 10 who have experienced bullying or social harassment.
-
-**Status:** This documentation captures the pivot definition as of the current planning phase. The existing application code predates this pivot and is not yet aligned with these specifications.
+FeelIt is an app supporting kids under 10 who have experienced bullying or social harassment.
 
 ---
 

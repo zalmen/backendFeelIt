@@ -1,7 +1,7 @@
 # FeelIt
 this is an awesome repo for an app
 
-## Product (pivot)
+## Product
 
-Product documentation for the FeelIt pivot is available in [`PRODUCT.md`](PRODUCT.md).
+Product documentation is available in [`PRODUCT.md`](PRODUCT.md).
 
