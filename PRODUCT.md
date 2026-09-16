@@ -142,9 +142,24 @@ The following decisions are not yet finalized and require further discussion.
 
 ## Mockups
 
-Visual mockups are still to be designed. Screens requiring mockups:
+### Daily Check-In
 
-1. **Daily Check-In** — First-open-of-day mood and experience prompts
-2. **Community Feed** — Closed question / survey posting and browsing
-3. **Anonymous Safe-Place Stories** — Story viewing, posting, and badge engagement
-4. **Post-Check-In Landing** — Home screen after daily check-in (design pending decision on navigation)
+First-open-of-day mood prompt ("How are you today?", screen 1 of 3). Users select from structured mood options: Good, Okay, or Not great.
+
+![Daily Check-In](mocks/daily-checkin.png)
+
+### Community Feed (Survey)
+
+Community survey screen showing a closed question ("What should I wear to the party?") with up to 4 image options. Users vote via structured choices, not free-text replies.
+
+![Community Feed](mocks/community-feed.png)
+
+### Anonymous Safe-Place Stories
+
+Safe place for sharing anonymous stories about unpleasant experiences. Shows story input, "Publish anonymously" action, other users' stories with badge reactions, and "Similar stories for you" section.
+
+![Anonymous Safe-Place Stories](mocks/anonymous-stories.png)
+
+### Still to be designed
+
+- **Post-Check-In Landing** — Home screen after daily check-in (design pending decision on navigation)
