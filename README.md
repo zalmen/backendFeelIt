@@ -65,6 +65,8 @@ This tenet has specific implications for how users can communicate:
 
 **Post-welcome:** Where the user lands after completing the Welcome screen is **not yet decided**. See Open Questions below.
 
+![Welcome Screen](mocks/welcome-screen.png)
+
 ---
 
 ## Screens
@@ -88,6 +90,8 @@ This tenet has specific implications for how users can communicate:
 
 **Safety note:** Responses are **structured choices only**—no open free-text replies to the poster. This prevents the feature from being used to send hurtful messages.
 
+![Community Feed](mocks/community-feed.png)
+
 ### Anonymous Safe-Place Stories (Unpleasant Events)
 
 **Purpose:** Provide a safe place for users to tell stories about unpleasant events that happened to them.
@@ -103,6 +107,8 @@ This tenet has specific implications for how users can communicate:
 3. **See similar stories** — after publishing a story, show the user other similar stories from other users
 
 **Design intent:** Help users feel less alone by seeing that others have had similar experiences, while protecting everyone's identity.
+
+![Anonymous Safe-Place Stories](mocks/anonymous-stories.png)
 
 ---
 
@@ -138,26 +144,6 @@ The following decisions are not yet finalized and require further discussion.
 
 ---
 
-## Mockups
-
-### Welcome Screen
-
-First-open-of-day mood prompt ("How are you today?", screen 1 of 3). Users select from structured mood options: Good, Okay, or Not great.
-
-![Welcome Screen](mocks/welcome-screen.png)
-
-### Community Feed (Survey)
-
-Community survey screen showing a closed question ("What should I wear to the party?") with up to 4 image options. Users vote via structured choices, not free-text replies.
-
-![Community Feed](mocks/community-feed.png)
-
-### Anonymous Safe-Place Stories
-
-Safe place for sharing anonymous stories about unpleasant experiences. Shows story input, "Publish anonymously" action, other users' stories with badge reactions, and "Similar stories for you" section.
-
-![Anonymous Safe-Place Stories](mocks/anonymous-stories.png)
-
-### Still to be designed
+## Mockups Still to Be Designed
 
 - **Post-Welcome Landing** — Home screen after the Welcome screen (design pending decision on navigation)
