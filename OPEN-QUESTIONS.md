@@ -14,10 +14,21 @@ The following decisions are not yet finalized and require further discussion.
 
 ## Welcome Screen Content
 
+### Step 1 — Levers
 - **Lever set for v1:** Which of the 5 levers ship in v1? Is 5 too many for kids under 10?
 - **Labels and icons:** Exact wording and visual endpoints for each lever
-- **Hard/kind chips:** Do the optional "something hard happened" / "something kind happened" chips exist?
 - **Personalization:** Do lever defaults or ranges adapt based on previous check-ins?
+
+### Step 2 — You're Not Alone
+- **Similarity matching:** How are "similar feelings" calculated from lever positions?
+- **Minimum cohort size:** What's the minimum number of similar kids before showing a count? (Privacy floor to avoid identifying small groups)
+- **Geographic scope:** Same city? Same region? Global?
+
+### Step 3 — Warm Gifts
+- **Gift catalog:** Which gifts ship in v1? How many options?
+- **Group-broadcast only:** Are gifts always sent to an anonymous group, or can they ever target individuals?
+- **Rate limits:** How often can a child send gifts? (Prevent spam, ensure gifts feel meaningful)
+- **Receiving gifts:** How/when do kids see gifts others sent to their cohort?
 
 ---
 

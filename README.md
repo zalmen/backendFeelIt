@@ -59,11 +59,13 @@ This tenet has specific implications for how users can communicate:
 
 **Trigger:** First app open of the day
 
-**Purpose:** Let kids check in with how they're feeling using gentle, visual **feeling levers**—no free text required.
+**Purpose:** A 3-step flow that lets kids check in, see they're not alone, and send anonymous kindness—all without free text.
 
-**Format: Feeling Levers (1–5 scale each)**
+---
 
-The child adjusts several levers, each representing a different dimension of their day. Visual icons at each end of the lever matter as much as the number—designed to be bullying-aware without naming bullies on the screen.
+#### Step 1 — How I Feel
+
+The child adjusts several **feeling levers** (1–5 scale each), each representing a different dimension of their day. Visual icons at each end matter as much as the number—designed to be bullying-aware without naming bullies on the screen.
 
 1. **Sunshine inside** — How bright my heart feels today
 2. **School weather** — How school felt (calm → stormy)
@@ -72,13 +74,47 @@ The child adjusts several levers, each representing a different dimension of the
 5. **Hope light** — How tomorrow looks from here
 
 **Rules:**
-- Levers only—no free text on the Welcome screen
+- Levers only—no free text
 - Each lever uses kid-friendly metaphors with gentle visual endpoints
 - Sensitivity: framing avoids direct bullying language while capturing the child's emotional state
 
-**Optional idea:** After setting levers, offer single-tap chips like "something hard happened" or "something kind happened" (still no free text) to flag notable moments.
+![Welcome Screen — Step 1: How I Feel](mocks/welcome-screen.png)
 
-![Welcome Screen](mocks/welcome-screen.png)
+---
+
+#### Step 2 — You're Not Alone
+
+After setting their levers, the child sees an **anonymous count** of other kids whose feelings look similar today.
+
+- Example: "42 kids felt close to this today"
+- Display uses anonymous dots/avatars only—no names, no identifiable faces
+- Optional supporting line: "Different schools. Same weather inside."
+
+**Design intent:** Reassure the child that others share similar feelings without exposing anyone's identity.
+
+![Welcome Screen — Step 2: You're Not Alone](mocks/welcome-not-alone.png)
+
+---
+
+#### Step 3 — Send a Warm Gift
+
+The child can pick one **structured kindness gift** to send to that anonymous group of similar-feeling kids.
+
+**Gift options (examples):**
+- Brave star
+- Hug cloud
+- You-matter heart
+- Pocket flashlight
+- High-five
+
+**How it works:**
+- One tap sends the gift into a shared "kindness jar" that those kids can receive
+- Recipients learn only that someone cared—**not who sent it**
+- No free text, no DMs, no way to target individuals
+
+**Design intent:** Empower kids to give support while respecting anti-harassment tenets. Builds connection without exposing identity.
+
+![Welcome Screen — Step 3: Send a Warm Gift](mocks/welcome-gift.png)
 
 ### Community Feed (Closed Questions / Surveys)
 
