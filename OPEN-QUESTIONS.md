@@ -14,9 +14,10 @@ The following decisions are not yet finalized and require further discussion.
 
 ## Welcome Screen Content
 
-- **Exact questions:** What specific questions are asked on the Welcome screen?
-- **Question format:** Multiple choice? Emoji-based? Slider scales?
-- **Personalization:** Do questions adapt based on previous answers or user history?
+- **Sticker packs:** What specific stickers are included in each panel (How I feel, What happened, What I need)?
+- **Emotion sticker range:** Which emotions beyond happy/sad should be represented?
+- **Moment stickers:** Which kid-world moments to include? How abstract vs. specific?
+- **Personalization:** Do available stickers adapt based on previous usage or user history?
 
 ---
 

@@ -59,11 +59,20 @@ This tenet has specific implications for how users can communicate:
 
 **Trigger:** First app open of the day
 
-**Purpose:** Understand the user's overall mood and let them share good or bad experiences from that day.
+**Purpose:** Let kids express how they're feeling and what happened using a creative, sticker-based "Silent Story"—no free text required.
 
-**Format:**
-- Prompt the user with **at most 3 basic questions**
-- Questions should be simple and appropriate for children under 10
+**Format: Silent Story (3 sticker panels)**
+
+Kids place stickers on three panels to form a short non-verbal story:
+
+1. **How I feel** — Emotion stickers beyond basic happy/sad (e.g. brave, lonely, proud, shaky, hopeful, quiet, angry-but-safe)
+2. **What happened** — Curated moment stickers from a kid's world (left out at recess, someone laughed, a friend sat with me, teacher noticed me, shared snack, alone at lunch, stood up for myself). Depictions are gentle and abstract—never graphic bullying imagery.
+3. **What I need / hope** — Stickers like hug, friend, quiet space, feel brave, tell a safe grown-up
+
+**Rules:**
+- Stickers/emojis only—no free text on the Welcome screen
+- Child can place a small number of stickers per panel; the order forms their story
+- Optional: A soft "weather around me" indicator (sunny/cloudy/storm) may enhance mood expression
 
 ![Welcome Screen](mocks/welcome-screen.png)
 
