@@ -116,26 +116,26 @@ The child can pick one **structured kindness gift** to send to that anonymous gr
 
 ![Welcome Screen — Step 3: Send a Warm Gift](mocks/welcome-gift.png)
 
-### Community Feed (Closed Questions / Surveys)
+### Help Me Choose
 
-**Purpose:** Let users ask the community (or communities) closed questions in a structured, safe format.
+**Purpose:** Let a young user engage with others safely by asking for help with everyday decisions.
 
 **How it works:**
-1. A user creates a post with a question
-2. The user can attach **up to 4 images** as options
-3. The user defines **possible responses** (survey-style choices)
-4. Other users respond by selecting from the predefined choices
+1. The asker writes a **free-text question** (e.g. "What should I wear to the party?")
+2. The asker uploads **3–4 images** as answer options (e.g. outfit photos)
+3. Other users see these asks in a feed and **choose exactly one image** to vote
+4. No typed replies, no comments, no DMs on this surface
 
 **Example:**
-> "What should I wear to this event?"
-> - [Image 1: Blue dress]
-> - [Image 2: Red shirt]
-> - [Image 3: Green sweater]
-> - [Image 4: Yellow jacket]
+> "What should I wear to the party?"
+> - [Image A: Dress]
+> - [Image B: Casual]
+> - [Image C: Bright]
+> - [Image D: Cozy]
 
-**Safety note:** Responses are **structured choices only**—no open free-text replies to the poster. This prevents the feature from being used to send hurtful messages.
+**Safety note:** Voters can only tap an image—no free-text responses to the asker. This keeps peer harassment risk low while still allowing the asker's own question text.
 
-![Community Feed](mocks/community-feed.png)
+![Help Me Choose](mocks/help-me-choose.png)
 
 ### Anonymous Safe-Place Stories (Unpleasant Events)
 
