@@ -59,20 +59,24 @@ This tenet has specific implications for how users can communicate:
 
 **Trigger:** First app open of the day
 
-**Purpose:** Let kids express how they're feeling and what happened using a creative, sticker-based "Silent Story"—no free text required.
+**Purpose:** Let kids check in with how they're feeling using gentle, visual **feeling levers**—no free text required.
 
-**Format: Silent Story (3 sticker panels)**
+**Format: Feeling Levers (1–5 scale each)**
 
-Kids place stickers on three panels to form a short non-verbal story:
+The child adjusts several levers, each representing a different dimension of their day. Visual icons at each end of the lever matter as much as the number—designed to be bullying-aware without naming bullies on the screen.
 
-1. **How I feel** — Emotion stickers beyond basic happy/sad (e.g. brave, lonely, proud, shaky, hopeful, quiet, angry-but-safe)
-2. **What happened** — Curated moment stickers from a kid's world (left out at recess, someone laughed, a friend sat with me, teacher noticed me, shared snack, alone at lunch, stood up for myself). Depictions are gentle and abstract—never graphic bullying imagery.
-3. **What I need / hope** — Stickers like hug, friend, quiet space, feel brave, tell a safe grown-up
+1. **Sunshine inside** — How bright my heart feels today
+2. **School weather** — How school felt (calm → stormy)
+3. **With others** — How included I felt with kids around me
+4. **Steady body** — Calm vs butterflies / shaky
+5. **Hope light** — How tomorrow looks from here
 
 **Rules:**
-- Stickers/emojis only—no free text on the Welcome screen
-- Child can place a small number of stickers per panel; the order forms their story
-- Optional: A soft "weather around me" indicator (sunny/cloudy/storm) may enhance mood expression
+- Levers only—no free text on the Welcome screen
+- Each lever uses kid-friendly metaphors with gentle visual endpoints
+- Sensitivity: framing avoids direct bullying language while capturing the child's emotional state
+
+**Optional idea:** After setting levers, offer single-tap chips like "something hard happened" or "something kind happened" (still no free text) to flag notable moments.
 
 ![Welcome Screen](mocks/welcome-screen.png)
 

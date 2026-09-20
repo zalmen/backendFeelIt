@@ -14,10 +14,10 @@ The following decisions are not yet finalized and require further discussion.
 
 ## Welcome Screen Content
 
-- **Sticker packs:** What specific stickers are included in each panel (How I feel, What happened, What I need)?
-- **Emotion sticker range:** Which emotions beyond happy/sad should be represented?
-- **Moment stickers:** Which kid-world moments to include? How abstract vs. specific?
-- **Personalization:** Do available stickers adapt based on previous usage or user history?
+- **Lever set for v1:** Which of the 5 levers ship in v1? Is 5 too many for kids under 10?
+- **Labels and icons:** Exact wording and visual endpoints for each lever
+- **Hard/kind chips:** Do the optional "something hard happened" / "something kind happened" chips exist?
+- **Personalization:** Do lever defaults or ranges adapt based on previous check-ins?
 
 ---
 
