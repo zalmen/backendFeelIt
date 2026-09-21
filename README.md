@@ -123,23 +123,27 @@ The child can pick one **structured kindness gift** to send to that anonymous gr
 
 ![Help Me Choose](mocks/help-me-choose.png)
 
-### Anonymous Safe-Place Stories (Unpleasant Events)
+### Another Ending
 
-**Purpose:** Provide a safe place for users to tell stories about unpleasant events that happened to them.
+**Purpose:** Let kids share what happened to them and receive hopeful alternative endings from others.
 
-**Privacy by design:**
-- The story author's identity is **NOT stored in the backend**
-- It must be **impossible to associate a story with a user**
-- This is a core architectural requirement, not just a UI choice
+**How it works:**
+1. A user writes a **free-text story** about something that happened to them
+2. They tap "Share anonymously" to post it to the feed
+3. In the **public feed**, stories appear **without author identity**
+4. Other users can **suggest an alternative ending** for any story
+5. Other users can give **hugs** to a story if they relate (structured reaction)
+6. The **author gets notified** when someone adds an ending (never left hanging)
 
-**Features on this screen:**
-1. **View other users' stories** — read anonymous experiences from the community
-2. **Engage via badges** — react to stories using badges (not free-text comments)
-3. **See similar stories** — after publishing a story, show the user other similar stories from other users
+**Privacy & safety:**
+- Public feed: no author identity shown on stories or endings
+- On their **Profile**, each user can see their own stories (private to them)
+- Hugs and endings are the safe engagement paths—no free-text DMs
+- Notifications to the author are private system messages
 
-**Design intent:** Help users feel less alone by seeing that others have had similar experiences, while protecting everyone's identity.
+**Design intent:** Give kids a way to process difficult experiences while receiving hope from peers who imagine a kinder outcome.
 
-![Anonymous Safe-Place Stories](mocks/anonymous-stories.png)
+![Another Ending](mocks/another-ending.png)
 
 ---
 

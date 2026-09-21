@@ -51,11 +51,21 @@ The following decisions are not yet finalized and require further discussion.
 
 ## Content Moderation
 
-- **Anonymous story moderation:** How are anonymous stories reviewed for harmful content without compromising anonymity?
 - **Help Me Choose moderation:** How is question text and image content moderated before appearing in the feed?
 - **Image count:** Should Help Me Choose allow 3 or 4 images per question?
 - **Reporting mechanism:** How can users report concerning content?
 - **Moderation team:** Who moderates content and how quickly?
+
+---
+
+## Another Ending
+
+- **Story moderation:** How are stories reviewed for harmful content before appearing in the feed?
+- **Ending moderation:** How are suggested endings moderated? Same flow as stories?
+- **Ending anonymity:** Are endings also anonymous, or do they show a first name / avatar?
+- **Hug rate limits:** How often can a user send hugs? (Prevent spam, keep hugs meaningful)
+- **Profile "My Stories" UX:** How does the user view and manage their own stories on Profile?
+- **Notification copy:** What do notifications say when someone suggests an ending? Tone and wording for kids.
 
 ---
 
