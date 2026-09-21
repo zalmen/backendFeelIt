@@ -35,6 +35,7 @@ Young children experiencing bullying often lack safe outlets to share their expe
 1. **Never leave a user hanging** — every user engagement must get a response (from other users or from the system) so no one feels abandoned.
 2. **Show them they're not alone** — their problems are not unique; others feel this too.
 3. **Give hope** — help the user believe things can change.
+4. **Invite safe connection between kids** — host and encourage cross-user engagement that stays kind and safe.
 
 ---
 
