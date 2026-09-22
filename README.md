@@ -95,10 +95,21 @@ Share what happened. Receive hopeful endings from others.
 
 Profile as a growing plant.
 
+**Plant visual:**
+- Plant art blends into UI (no rectangular photo background)
+- Plant starts relatively bare so growth/evolution is visible over time
 - Every engagement waters it (yours and others' toward you)
-- Plant evolves visually through growth stages
-- Grows **unique fruits** (app-wide unique icons)
-- Ripe fruits can be gifted to other users
+
+**Profile stickers:** The pot holds stickers representing child attributes:
+- City emblem (e.g. Kfar Saba)
+- Favorite character
+- Hobby (e.g. basketball)
+
+**Hugs received:** Profile displays total hugs received count.
+
+**Unique fruits (two inventories):**
+1. **Grown by my plant** — marked as grown-by-me; can gift to others
+2. **Received as gifts** — can also re-gift to others
 
 ![My Plant](mocks/my-plant.png)
 

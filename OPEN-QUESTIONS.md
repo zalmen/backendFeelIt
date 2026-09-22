@@ -79,8 +79,12 @@ The following decisions are not yet finalized and require further discussion.
 - **Growth stages:** How many stages does the plant have? What visual changes at each stage?
 - **Fruit uniqueness:** How are fruits made unique app-wide? Generated per-user? Limited pool with first-come assignment?
 - **Fruit catalog:** What types of fruits exist? How many can a user grow?
+- **Grown vs received UX:** How are the two fruit inventories displayed? Can users tell which fruits they grew vs received?
 - **Gifting surfaces:** Where can users gift their fruits? Only Happy Ending? Also Welcome Step 3? Random matching?
 - **Fruit recipient experience:** How does the recipient see/receive a gifted fruit? Notification? On their plant?
+- **Profile stickers catalog:** What stickers are available? Categories (city, character, hobby)?
+- **Sticker moderation:** How are custom stickers or user-selected stickers moderated?
+- **City emblem sources:** Where do city emblems come from? Pre-loaded set? User-submitted?
 
 ---
 
