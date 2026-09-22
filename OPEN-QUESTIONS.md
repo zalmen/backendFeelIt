@@ -58,7 +58,7 @@ The following decisions are not yet finalized and require further discussion.
 
 ---
 
-## Another Ending
+## Happy Ending / סוף שמח
 
 - **Story moderation:** How are stories reviewed for harmful content before appearing in the feed?
 - **Ending moderation:** How are suggested endings moderated? Same flow as stories?

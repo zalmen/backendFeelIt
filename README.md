@@ -130,15 +130,15 @@ The child can pick one **structured kindness gift** to send to that anonymous gr
 
 ![Help Me Choose](mocks/help-me-choose.png)
 
-### Another Ending / סוף אחר
+### Happy Ending / סוף שמח
 
-**Purpose:** Let kids share what happened to them and receive hopeful alternative endings from others.
+**Purpose:** Let kids share what happened to them and receive hopeful happy endings from others.
 
 **How it works:**
 1. A user writes a **free-text story** about something that happened to them
 2. They tap "Share anonymously" / "שיתוף בעילום שם" to post it to the feed
 3. In the **public feed**, stories appear **without author identity**
-4. Other users can **suggest an alternative ending** / "הצעת סוף" for any story
+4. Other users can **suggest a happy ending** / "הצעת סוף" for any story
 5. Other users can give **hugs** / **חיבוק** to a story if they relate (structured reaction)
 6. The **author gets notified** when someone adds an ending (never left hanging)
 
@@ -150,7 +150,7 @@ The child can pick one **structured kindness gift** to send to that anonymous gr
 
 **Design intent:** Give kids a way to process difficult experiences while receiving hope from peers who imagine a kinder outcome.
 
-![Another Ending](mocks/another-ending.png)
+![Happy Ending](mocks/happy-ending.png)
 
 ---
 
