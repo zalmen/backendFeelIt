@@ -2,6 +2,8 @@
 
 FeelIt is an app supporting kids under 10 who have experienced bullying or social harassment.
 
+**v1 language: Hebrew** — UI copy is gender-neutral Hebrew; brand name stays "FeelIt".
+
 ---
 
 ## Purpose
@@ -41,7 +43,7 @@ Young children experiencing bullying often lack safe outlets to share their expe
 
 ## Screens
 
-### Welcome Screen
+### Welcome Screen / פתיחה
 
 **Trigger:** First app open of the day
 
@@ -53,11 +55,13 @@ Young children experiencing bullying often lack safe outlets to share their expe
 
 The child adjusts several **feeling levers** (1–5 scale each), each representing a different dimension of their day. Visual icons at each end matter as much as the number—designed to be bullying-aware without naming bullies on the screen.
 
-1. **Sunshine inside** — How bright my heart feels today
-2. **School weather** — How school felt (calm → stormy)
-3. **With others** — How included I felt with kids around me
-4. **Steady body** — Calm vs butterflies / shaky
-5. **Hope light** — How tomorrow looks from here
+| English | Hebrew |
+|---------|--------|
+| Sunshine inside | שמש בפנים |
+| School weather | מזג אוויר בבית הספר |
+| With others | עם אחרים |
+| Steady body | רגועים בגוף |
+| Hope light | אור של תקווה |
 
 **Rules:**
 - Levers only—no free text
@@ -68,13 +72,13 @@ The child adjusts several **feeling levers** (1–5 scale each), each representi
 
 ---
 
-#### Step 2 — You're Not Alone
+#### Step 2 — You're Not Alone / לא לבד כאן
 
 After setting their levers, the child sees an **anonymous count** of other kids whose feelings look similar today.
 
-- Example: "42 kids felt close to this today"
+- Example: "42 kids felt close to this today" / "42 ילדים הרגישו דומה היום"
 - Display uses anonymous dots/avatars only—no names, no identifiable faces
-- Optional supporting line: "Different schools. Same weather inside."
+- Supporting line: "Different schools. Same weather inside." / "בתי ספר שונים. אותו מזג אוויר בפנים."
 
 **Design intent:** Reassure the child that others share similar feelings without exposing anyone's identity.
 
@@ -82,16 +86,19 @@ After setting their levers, the child sees an **anonymous count** of other kids 
 
 ---
 
-#### Step 3 — Send a Warm Gift
+#### Step 3 — Send a Warm Gift / מתנה חמה
 
 The child can pick one **structured kindness gift** to send to that anonymous group of similar-feeling kids.
 
-**Gift options (examples):**
-- Brave star
-- Hug cloud
-- You-matter heart
-- Pocket flashlight
-- High-five
+**Gift options:**
+
+| English | Hebrew |
+|---------|--------|
+| Brave star | כוכב אומץ |
+| Hug cloud | ענן חיבוק |
+| You-matter heart | מגיע לכם |
+| Flashlight for a hard day | פנס ליום קשה |
+| High-five | תנו חמש |
 
 **How it works:**
 - One tap sends the gift into a shared "kindness jar" that those kids can receive
@@ -102,42 +109,42 @@ The child can pick one **structured kindness gift** to send to that anonymous gr
 
 ![Welcome Screen — Step 3: Send a Warm Gift](mocks/welcome-gift.png)
 
-### Help Me Choose
+### Help Me Choose / עזרו לי לבחור
 
 **Purpose:** Let a young user engage with others safely by asking for help with everyday decisions.
 
 **How it works:**
-1. The asker writes a **free-text question** (e.g. "What should I wear to the party?")
+1. The asker writes a **free-text question** (e.g. "מה ללבוש למסיבה?" / "What should I wear to the party?")
 2. The asker uploads **3–4 images** as answer options (e.g. outfit photos)
 3. Other users see these asks in a feed and **choose exactly one image** to vote
 4. No typed replies, no comments, no DMs on this surface
 
 **Example:**
-> "What should I wear to the party?"
-> - [Image A: Dress]
-> - [Image B: Casual]
-> - [Image C: Bright]
-> - [Image D: Cozy]
+> "מה ללבוש למסיבה?" (What should I wear to the party?)
+> - [Image א: שמלה / Dress]
+> - [Image ב: קז'ואל / Casual]
+> - [Image ג: צבעוני / Bright]
+> - [Image ד: נוח / Cozy]
 
 **Safety note:** Voters can only tap an image—no free-text responses to the asker. This keeps peer harassment risk low while still allowing the asker's own question text.
 
 ![Help Me Choose](mocks/help-me-choose.png)
 
-### Another Ending
+### Another Ending / סוף אחר
 
 **Purpose:** Let kids share what happened to them and receive hopeful alternative endings from others.
 
 **How it works:**
 1. A user writes a **free-text story** about something that happened to them
-2. They tap "Share anonymously" to post it to the feed
+2. They tap "Share anonymously" / "שיתוף בעילום שם" to post it to the feed
 3. In the **public feed**, stories appear **without author identity**
-4. Other users can **suggest an alternative ending** for any story
-5. Other users can give **hugs** to a story if they relate (structured reaction)
+4. Other users can **suggest an alternative ending** / "הצעת סוף" for any story
+5. Other users can give **hugs** / **חיבוק** to a story if they relate (structured reaction)
 6. The **author gets notified** when someone adds an ending (never left hanging)
 
 **Privacy & safety:**
 - Public feed: no author identity shown on stories or endings
-- On their **Profile**, each user can see their own stories (private to them)
+- On their **Profile** / **אני**, each user can see their own stories (private to them)
 - Hugs and endings are the safe engagement paths—no free-text DMs
 - Notifications to the author are private system messages
 
