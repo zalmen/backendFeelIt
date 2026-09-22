@@ -2,7 +2,7 @@
 
 **A safe space for kids under 10 who've experienced bullying.** FeelIt helps children express difficult feelings, see they're not alone, and receive kindness from peers—without the risks of open social interaction.
 
-> v1 UI language is Hebrew. Mocks below show the Hebrew interface.
+> v1 UI language is Hebrew. Mocks show the Hebrew interface. Hebrew UI may randomly use masculine or feminine address across screens (not only neutral phrasing).
 
 ---
 
@@ -30,29 +30,33 @@ Daily check-in flow (3 steps). No free text.
 
 Five feeling levers (1–5 scale), using kid-friendly metaphors:
 
-- Sunshine inside
+- Sunshine inside me is shining
 - School weather
-- With others
-- Steady body
+- Fun with others
+- Calm in body
 - Hope light
 
 ![Welcome — Step 1](mocks/welcome-screen.png)
 
 #### Step 2 — You're Not Alone
 
-Shows an anonymous count of kids with similar feelings today. No names, no faces—just reassurance.
+Shows an anonymous count of kids with similar feelings today. No names, no faces—just reassurance that "you're not alone here."
 
 ![Welcome — Step 2](mocks/welcome-not-alone.png)
 
-#### Step 3 — Send Kindness
+#### Step 3 — Spread Love
 
-Pick one kindness gift to send anonymously to that similar-feeling group:
+Two currencies in the app:
+
+1. **Hugs** — fungible balance users accumulate; can send hugs to everyone who feels similarly
+2. **Unique icons** — non-fungible, app-wide unique icons (from My Plant fruits) that can be gifted
+
+Gift options on this screen:
 
 - Brave star
 - Hug cloud
 - You-matter heart
 - Flashlight
-- High-five
 
 Recipients learn only that someone cared—not who.
 

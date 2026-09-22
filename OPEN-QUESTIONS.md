@@ -26,11 +26,13 @@ The following decisions are not yet finalized and require further discussion.
 - **Minimum cohort size:** What's the minimum number of similar kids before showing a count? (Privacy floor to avoid identifying small groups)
 - **Geographic scope:** Same city? Same region? Global?
 
-### Step 3 — Warm Gifts
-- **Gift catalog:** Which gifts ship in v1? How many options?
-- **Group-broadcast only:** Are gifts always sent to an anonymous group, or can they ever target individuals?
-- **Rate limits:** How often can a child send gifts? (Prevent spam, ensure gifts feel meaningful)
-- **Receiving gifts:** How/when do kids see gifts others sent to their cohort?
+### Step 3 — Spread Love
+- **Hug economy:** How do users accumulate hugs? Starting balance? Earn rate?
+- **Hug spending:** When sending hugs to a similar-feeling cohort, how many hugs are spent?
+- **Unique icons (NFT-like):** How are unique icons generated? From My Plant fruits only, or other sources?
+- **Group-broadcast only:** Are hugs/icons always sent to an anonymous group, or can they ever target individuals?
+- **Rate limits:** How often can a child send hugs/icons? (Prevent spam, ensure gifts feel meaningful)
+- **Receiving:** How/when do kids see hugs or icons others sent to their cohort?
 
 ---
 
