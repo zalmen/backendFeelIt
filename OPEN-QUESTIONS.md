@@ -2,6 +2,8 @@
 
 The following decisions are not yet finalized and require further discussion.
 
+> Note: v1 UI is Hebrew; mocks reflect Hebrew copy.
+
 ---
 
 ## Navigation & Information Architecture
@@ -58,7 +60,7 @@ The following decisions are not yet finalized and require further discussion.
 
 ---
 
-## Happy Ending / סוף שמח
+## Happy Ending
 
 - **Story moderation:** How are stories reviewed for harmful content before appearing in the feed?
 - **Ending moderation:** How are suggested endings moderated? Same flow as stories?
@@ -69,7 +71,7 @@ The following decisions are not yet finalized and require further discussion.
 
 ---
 
-## My Plant / הצמח שלי
+## My Plant
 
 - **What counts as "water":** Which actions water the plant? Check-ins, votes, hugs sent, hugs received, endings written, endings received?
 - **Growth stages:** How many stages does the plant have? What visual changes at each stage?

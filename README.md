@@ -2,7 +2,7 @@
 
 **A safe space for kids under 10 who've experienced bullying.** FeelIt helps children express difficult feelings, see they're not alone, and receive kindness from peers—without the risks of open social interaction.
 
-> v1 ships in Hebrew (gender-neutral UI). Mocks below are production-intent iPhone portraits.
+> v1 UI language is Hebrew. Mocks below show the Hebrew interface.
 
 ---
 
@@ -22,7 +22,7 @@
 
 ## Screens
 
-### Welcome / פתיחה
+### Welcome
 
 Daily check-in flow (3 steps). No free text.
 
@@ -30,33 +30,29 @@ Daily check-in flow (3 steps). No free text.
 
 Five feeling levers (1–5 scale), using kid-friendly metaphors:
 
-| Lever | Hebrew |
-|-------|--------|
-| Sunshine inside | שמש בפנים |
-| School weather | מזג אוויר בבית הספר |
-| With others | עם אחרים |
-| Steady body | רגועים בגוף |
-| Hope light | אור של תקווה |
+- Sunshine inside
+- School weather
+- With others
+- Steady body
+- Hope light
 
 ![Welcome — Step 1](mocks/welcome-screen.png)
 
-#### Step 2 — You're Not Alone / לא לבד כאן
+#### Step 2 — You're Not Alone
 
 Shows an anonymous count of kids with similar feelings today. No names, no faces—just reassurance.
 
 ![Welcome — Step 2](mocks/welcome-not-alone.png)
 
-#### Step 3 — Send Kindness / שלחו אדיבות
+#### Step 3 — Send Kindness
 
 Pick one kindness gift to send anonymously to that similar-feeling group:
 
-| Gift | Hebrew |
-|------|--------|
-| Brave star | כוכב אומץ |
-| Hug cloud | ענן חיבוק |
-| You-matter heart | מגיע לכם |
-| Flashlight | פנס ליום קשה |
-| High-five | תנו חמש |
+- Brave star
+- Hug cloud
+- You-matter heart
+- Flashlight
+- High-five
 
 Recipients learn only that someone cared—not who.
 
@@ -64,7 +60,7 @@ Recipients learn only that someone cared—not who.
 
 ---
 
-### Help Me Choose / עזרו לי לבחור
+### Help Me Choose
 
 Safe peer engagement through image-based polls.
 
@@ -76,12 +72,12 @@ Safe peer engagement through image-based polls.
 
 ---
 
-### Happy Ending / סוף שמח
+### Happy Ending
 
 Share what happened. Receive hopeful endings from others.
 
 - User writes a story, posts anonymously
-- Others suggest happy endings or send hugs (חיבוק)
+- Others suggest happy endings or send hugs
 - Author gets notified—never left hanging
 - Stories saved privately on the author's My Plant profile
 
@@ -89,7 +85,7 @@ Share what happened. Receive hopeful endings from others.
 
 ---
 
-### My Plant / הצמח שלי
+### My Plant
 
 Profile as a growing plant.
 
