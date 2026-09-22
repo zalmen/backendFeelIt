@@ -28,13 +28,15 @@ Daily check-in flow (3 steps). No free text.
 
 #### Step 1 — How I Feel
 
-Five feeling levers (1–5 scale), using kid-friendly metaphors:
+Five feeling levers (1–5 scale). Each lever has **negative pole on left**, **positive pole on right**:
 
-- Sunshine inside me is shining
-- School weather
-- Fun with others
-- Calm in body
-- Hope light
+| Lever | Left (1) | Right (5) |
+|-------|----------|-----------|
+| Sunshine inside me is shining | Weak | Strong |
+| School weather | Stormy | Bright |
+| Fun with others | Alone | Belonging |
+| Calm in body | Butterflies | Worries |
+| Hope light | Dim | Bright |
 
 ![Welcome — Step 1](mocks/welcome-screen.png)
 
