@@ -144,13 +144,34 @@ The child can pick one **structured kindness gift** to send to that anonymous gr
 
 **Privacy & safety:**
 - Public feed: no author identity shown on stories or endings
-- On their **Profile** / **אני**, each user can see their own stories (private to them)
+- On their **My Plant** / **הצמח שלי** profile, each user can see their own stories (private to them)
 - Hugs and endings are the safe engagement paths—no free-text DMs
 - Notifications to the author are private system messages
 
 **Design intent:** Give kids a way to process difficult experiences while receiving hope from peers who imagine a kinder outcome.
 
 ![Happy Ending](mocks/happy-ending.png)
+
+### My Plant / הצמח שלי
+
+**Purpose:** The user's profile, represented as a growing plant that visualizes their engagement and growth in the app.
+
+**How it works:**
+- Every **engagement by the user** in the app (check-ins, votes, hugs, endings) **waters** the plant
+- Engagement **from other users toward this user** (hugs received, endings on their stories) also waters the plant
+- The plant **grows and evolves visually** as total engagement increases
+- The plant grows **unique fruits** — app-wide unique icons that only this user has grown
+- Once a fruit has grown, the user can **gift it** to other users (e.g. on Happy Ending / סוף שמח, or randomly to someone who feels similarly today)
+
+**Features on this screen:**
+- Current growth stage indicator (e.g. "שלב צמיחה 3 · נבט בוגר")
+- Visual plant that evolves over time
+- "Water for today" progress bar showing engagement + hugs/endings received
+- Collection of unique fruits grown, with gifting option
+
+**Design intent:** Gamify positive engagement while giving kids a personal space that reflects their journey. Fruit gifting extends the kindness loop beyond anonymous gifts.
+
+![My Plant](mocks/my-plant.png)
 
 ---
 

@@ -64,8 +64,19 @@ The following decisions are not yet finalized and require further discussion.
 - **Ending moderation:** How are suggested endings moderated? Same flow as stories?
 - **Ending anonymity:** Are endings also anonymous, or do they show a first name / avatar?
 - **Hug rate limits:** How often can a user send hugs? (Prevent spam, keep hugs meaningful)
-- **Profile "My Stories" UX:** How does the user view and manage their own stories on Profile?
+- **My Stories on My Plant:** How does the user view and manage their own stories on their plant profile?
 - **Notification copy:** What do notifications say when someone suggests an ending? Tone and wording for kids.
+
+---
+
+## My Plant / הצמח שלי
+
+- **What counts as "water":** Which actions water the plant? Check-ins, votes, hugs sent, hugs received, endings written, endings received?
+- **Growth stages:** How many stages does the plant have? What visual changes at each stage?
+- **Fruit uniqueness:** How are fruits made unique app-wide? Generated per-user? Limited pool with first-come assignment?
+- **Fruit catalog:** What types of fruits exist? How many can a user grow?
+- **Gifting surfaces:** Where can users gift their fruits? Only Happy Ending? Also Welcome Step 3? Random matching?
+- **Fruit recipient experience:** How does the recipient see/receive a gifted fruit? Notification? On their plant?
 
 ---
 
