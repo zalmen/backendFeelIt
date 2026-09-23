@@ -72,7 +72,7 @@ Safe peer engagement through image-based polls.
 
 **Top controls:**
 - Ask new question button
-- My Questions — view your posted questions and incoming votes
+- My Questions (השאלות שלי) — view your posted questions and incoming votes
 
 **Feed:**
 - Shows other kids' questions
@@ -80,8 +80,6 @@ Safe peer engagement through image-based polls.
 - Vote by tapping one image — no typed replies, no comments, no DMs
 
 ![What do they say?](mocks/what-do-they-say.png)
-
-![My Questions](mocks/my-questions.png)
 
 ---
 
