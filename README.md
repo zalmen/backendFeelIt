@@ -32,11 +32,11 @@ Five feeling levers (1–5 scale). Each lever has **negative pole on left**, **p
 
 | Lever | Left (1) | Right (5) |
 |-------|----------|-----------|
-| Sunshine inside me is shining | Weak | Strong |
+| Sunshine inside me is shining | Low | High |
 | School weather | Stormy | Bright |
 | Fun with others | Alone | Belonging |
 | Calm in body | Worries | Butterflies |
-| Hope light | Dim | Bright |
+| Hope light | Weak | Strong |
 
 ![Welcome — Step 1](mocks/welcome-screen.png)
 
