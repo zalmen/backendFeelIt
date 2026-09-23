@@ -36,12 +36,12 @@ The following decisions are not yet finalized and require further discussion.
 
 ---
 
-## Help Me Choose & Community Model
+## What do they say? & Community Model
 
 - **Single vs. multiple communities:** Is there one global community, or can users join/create multiple communities?
 - **Community joining:** How do kids discover and join communities?
 - **Community scope:** Are communities geographic, interest-based, age-based, or something else?
-- **Feed visibility:** Who sees a Help Me Choose question? Everyone, or just the asker's community/circle?
+- **Feed visibility:** Who sees a question? Everyone, or just the asker's community/circle?
 
 ---
 
@@ -55,8 +55,8 @@ The following decisions are not yet finalized and require further discussion.
 
 ## Content Moderation
 
-- **Help Me Choose moderation:** How is question text and image content moderated before appearing in the feed?
-- **Image count:** Should Help Me Choose allow 3 or 4 images per question?
+- **Question moderation:** How is question text and image content moderated before appearing in the feed?
+- **Image count:** Should questions allow 3 or 4 images per question?
 - **Reporting mechanism:** How can users report concerning content?
 - **Moderation team:** Who moderates content and how quickly?
 

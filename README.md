@@ -66,15 +66,22 @@ Recipients learn only that someone cared—not who.
 
 ---
 
-### Help Me Choose
+### What do they say? / מה אומרים?
 
 Safe peer engagement through image-based polls.
 
-- Asker posts a question + 3–4 images
-- Others vote by tapping one image
-- No typed replies, no comments, no DMs
+**Top controls:**
+- Ask new question button
+- My Questions — view your posted questions and incoming votes
 
-![Help Me Choose](mocks/help-me-choose.png)
+**Feed:**
+- Shows other kids' questions
+- Each card: question text + image options (photos)
+- Vote by tapping one image — no typed replies, no comments, no DMs
+
+![What do they say?](mocks/what-do-they-say.png)
+
+![My Questions](mocks/my-questions.png)
 
 ---
 
