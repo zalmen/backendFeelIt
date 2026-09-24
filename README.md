@@ -51,12 +51,20 @@ Kids express their emotional state through five feeling levers. Each lever uses 
 
 Immediate emotional validation: a real-time count of other kids feeling similarly. Around the count, a cluster of **stickers** (hobbies, interests, characters) sampled from similar-feeling peers—personalizing the connection without revealing identity. No names, no faces, no schools.
 
+**Two anonymous actions** available directly from this screen:
+- **Group Hug** — send a hug to everyone in the similar-feeling cohort at once
+- **Random Gift** — send a unique gift to one random kid from the cohort
+
+Both actions are anonymous; recipients never know who sent.
+
 ![Welcome Step 2 — Anonymous Peer Count](mocks/annotated/welcome-step2-annotated.png)
 
 **For engineering:**
 - Query users with similar lever profiles (threshold TBD in Open Questions)
 - Display anonymized count + random sticker sample from matching cohort
 - Minimum cohort size floor to protect small groups
+- Group hug: broadcast to all matching users
+- Random gift: select one random user from cohort, deliver gift anonymously
 
 ---
 
