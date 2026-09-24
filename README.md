@@ -42,7 +42,7 @@ Five feeling levers (1–5 scale). Each lever has **negative pole on left**, **p
 
 #### Step 2 — You're Not Alone
 
-Shows an anonymous count of kids with similar feelings today. No names, no faces—just reassurance that "you're not alone here."
+Shows an anonymous count of kids with similar feelings today. Around the count, a cluster of **stickers** (hobbies, interests, characters) sampled from similar-feeling peers—personalizing the connection without revealing identity. No names, no faces, no schools—just reassurance that "you're not alone here."
 
 ![Welcome — Step 2](mocks/welcome-not-alone.png)
 
