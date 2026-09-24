@@ -22,101 +22,135 @@
 
 ## Screens
 
-### Welcome
+### Welcome Flow · פתיחה
 
-Daily check-in flow (3 steps). No free text.
+Daily check-in flow (3 steps). No free text—only structured inputs that are safe by design.
 
 #### Step 1 — How I Feel
 
-Five feeling levers (1–5 scale). Each lever has **negative pole on left**, **positive pole on right**:
+Kids express their emotional state through five feeling levers. Each lever uses a 1–5 scale with intuitive poles: negative on the left, positive on the right. Visual anchors (emoji icons) make abstract feelings tangible for young users.
+
+![Welcome Step 1 — Feeling Levers](mocks/annotated/welcome-step1-annotated.png)
 
 | Lever | Left (1) | Right (5) |
 |-------|----------|-----------|
-| Sunshine inside me is shining | Low | High |
+| Sunshine inside me | Low | High |
 | School weather | Stormy | Bright |
 | Fun with others | Alone | Belonging |
 | Calm in body | Worries | Butterflies |
 | Hope light | Weak | Strong |
 
-![Welcome — Step 1](mocks/welcome-screen.png)
+**For engineering:**
+- Persist lever values per user per day
+- Calculate similarity score for Step 2 matching
+- No text input fields on this screen
+
+---
 
 #### Step 2 — You're Not Alone
 
-Shows an anonymous count of kids with similar feelings today. Around the count, a cluster of **stickers** (hobbies, interests, characters) sampled from similar-feeling peers—personalizing the connection without revealing identity. No names, no faces, no schools—just reassurance that "you're not alone here."
+Immediate emotional validation: a real-time count of other kids feeling similarly. Around the count, a cluster of **stickers** (hobbies, interests, characters) sampled from similar-feeling peers—personalizing the connection without revealing identity. No names, no faces, no schools.
 
-![Welcome — Step 2](mocks/welcome-not-alone.png)
+![Welcome Step 2 — Anonymous Peer Count](mocks/annotated/welcome-step2-annotated.png)
+
+**For engineering:**
+- Query users with similar lever profiles (threshold TBD in Open Questions)
+- Display anonymized count + random sticker sample from matching cohort
+- Minimum cohort size floor to protect small groups
+
+---
 
 #### Step 3 — Spread Love
 
-Two currencies in the app:
+Two currencies enable kids to send kindness without DMs or direct contact:
 
-1. **Hugs** — fungible balance users accumulate; can send hugs to everyone who feels similarly
-2. **Unique icons** — non-fungible, app-wide unique icons (from My Plant fruits) that can be gifted
+1. **Hugs** — fungible balance; can send hugs to everyone in the similar-feeling cohort at once
+2. **Unique Icons** — one-time collectible gifts grown from My Plant fruits
 
-Gift options on this screen:
+Recipients learn only that someone cared—not who sent it.
 
-- Brave star
-- Hug cloud
-- You-matter heart
-- Flashlight
+![Welcome Step 3 — Spread Love](mocks/annotated/welcome-step3-annotated.png)
 
-Recipients learn only that someone cared—not who.
-
-![Welcome — Step 3](mocks/welcome-gift.png)
+**For engineering:**
+- Deduct hugs from sender balance on send
+- Broadcast to all users in matching cohort
+- Unique icons are single-use; remove from sender inventory on gift
 
 ---
 
-### What do they say? / מה אומרים?
+### What do they say? · מה אומרים?
 
-Safe peer engagement through image-based polls.
+Safe peer engagement through image-based polls. Kids ask questions with 3–4 photo options; others vote by tapping one image. No typed replies, no comments, no DMs—just visual choices.
+
+![What do they say? — Image Polls](mocks/annotated/what-do-they-say-annotated.png)
 
 **Top controls:**
-- Ask new question button
-- My Questions (השאלות שלי) — view your posted questions and incoming votes
+- **New Question** — create an image-based poll
+- **My Questions** — view your posted questions and incoming votes (accessed from main screen, no separate mock)
 
-**Feed:**
-- Shows other kids' questions
-- Each card: question text + image options (photos)
-- Vote by tapping one image — no typed replies, no comments, no DMs
-
-![What do they say?](mocks/what-do-they-say.png)
+**For engineering:**
+- Store question text + 3–4 image URLs per poll
+- One vote per user per question
+- Aggregate vote counts; no voter identity exposed
 
 ---
 
-### Happy Ending
+### Happy Ending · סוף שמח
 
-Share what happened. Receive hopeful endings from others.
+Share what happened anonymously. Receive hopeful endings from peers. Stories get better here.
 
-- User writes a story, posts anonymously
-- Others suggest happy endings or send hugs
-- Author gets notified—never left hanging
+![Happy Ending — Anonymous Stories](mocks/annotated/happy-ending-annotated.png)
+
+- **Anonymous sharing** — tell your story without revealing identity
+- **Suggest happy endings** — contribute hope to someone else's story
+- **Send hugs** — emotional support as reaction
 - Stories saved privately on the author's My Plant profile
 
-![Happy Ending](mocks/happy-ending.png)
+**For engineering:**
+- Stories stored with author reference (not exposed in UI)
+- Endings linked to parent story
+- Hug count per story; notify author on new endings
 
 ---
 
-### My Plant
+### My Plant · הצמח שלי
 
-Profile as a growing plant.
+Profile as a growing plant. Every engagement waters it—yours and others' kindness toward you.
+
+![My Plant — Living Profile](mocks/annotated/my-plant-annotated.png)
 
 **Plant visual:**
-- Plant art blends into UI (no rectangular photo background)
-- Plant starts relatively bare so growth/evolution is visible over time
-- Every engagement waters it (yours and others' toward you)
+- Plant art blends into UI (no rectangular photo frame)
+- Starts small so growth/evolution is visible over time
+- Growth stage reflects cumulative engagement
 
-**Profile stickers:** The pot holds stickers representing child attributes:
-- City emblem (e.g. Kfar Saba)
-- Favorite character
-- Hobby (e.g. basketball)
+**Identity stickers:** The pot holds stickers (city, character, hobby) that personalize without revealing who you are—same visual language as the peer stickers on Step 2.
 
-**Hugs received:** Profile displays total hugs received count.
+**Hugs received:** Total count displayed prominently.
 
-**Unique fruits (two inventories):**
-1. **Grown by my plant** — marked as grown-by-me; can gift to others
+**Fruit inventories:**
+1. **Grown by my plant** — unique items you cultivated; can gift to others
 2. **Received as gifts** — can also re-gift to others
 
-![My Plant](mocks/my-plant.png)
+**For engineering:**
+- Track growth points per user (actions TBD in Open Questions)
+- Sticker selection stored per user
+- Fruit ownership table with "grown" vs "received" flag
+
+---
+
+## Raw Mocks
+
+Original phone screenshots (Hebrew UI) are available under `mocks/` for engineering reference:
+
+| Screen | File |
+|--------|------|
+| Welcome Step 1 | `mocks/welcome-screen.png` |
+| Welcome Step 2 | `mocks/welcome-not-alone.png` |
+| Welcome Step 3 | `mocks/welcome-gift.png` |
+| What do they say? | `mocks/what-do-they-say.png` |
+| Happy Ending | `mocks/happy-ending.png` |
+| My Plant | `mocks/my-plant.png` |
 
 ---
 
