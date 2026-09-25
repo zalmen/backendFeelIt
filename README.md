@@ -22,6 +22,8 @@
 
 ## Screens
 
+**App-wide navigation:** All screens share the same four-tab bottom navigation bar (RTL order: הצמח · סוף שמח · מה אומרים? · פתיחה). The active tab is highlighted based on the current screen. Welcome flow screens have פתיחה active.
+
 ### Welcome Flow · פתיחה
 
 Daily check-in flow (3 steps). No free text—only structured inputs that are safe by design.
