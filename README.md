@@ -1,169 +1,169 @@
 # FeelIt
 
-**A safe space for kids under 10 who've experienced bullying.** FeelIt helps children express difficult feelings, see they're not alone, and receive kindness from peers—without the risks of open social interaction.
+**מרחב בטוח לילדים עד גיל 10 שחוו בריונות.** FeelIt עוזרת לילדים לבטא רגשות קשים, לראות שהם לא לבד, ולקבל חמימות מילדים אחרים — בלי הסיכונים של אינטראקציה חברתית פתוחה.
 
-> v1 UI language is Hebrew. Mocks show the Hebrew interface. Hebrew UI may randomly use masculine or feminine address across screens (not only neutral phrasing).
-
----
-
-## Tenets
-
-### Don'ts
-1. **Don't store personal information** beyond city, first name, and age.
-2. **Don't let free text target another user** — prevents harassment and outing.
-
-### Do's
-1. **Never leave a user hanging** — every engagement gets a response.
-2. **Show them they're not alone** — others feel this too.
-3. **Give hope** — things can change.
-4. **Invite safe connection** — cross-user engagement that stays kind.
+> ממשק v1 בעברית. המוקאפים מציגים את הממשק בעברית. הממשק עשוי להשתמש בפנייה בזכר או בנקבה באופן אקראי בין מסכים (לא רק ניסוח ניטרלי).
 
 ---
 
-## Screens
+## עקרונות מנחים
 
-**App-wide navigation:** All screens share the same four-tab bottom navigation bar (RTL order: הצמח · סוף שמח · מה אומרים? · פתיחה). The active tab is highlighted based on the current screen. Welcome flow screens have פתיחה active.
+### לא לעשות
+1. **לא לאחסן מידע אישי** מעבר לעיר, שם פרטי וגיל.
+2. **לא לאפשר לטקסט חופשי לכוון למשתמש אחר** — מונע הטרדה וחשיפת זהות.
 
-### Welcome Flow · פתיחה
-
-Daily check-in flow (3 steps). No free text—only structured inputs that are safe by design.
-
-#### Step 1 — How I Feel
-
-Kids express their emotional state through five feeling levers. Each lever uses a 1–5 scale with intuitive poles: negative on the left, positive on the right. Visual anchors (emoji icons) make abstract feelings tangible for young users.
-
-![Welcome Step 1 — Feeling Levers](mocks/annotated/welcome-step1-annotated.png)
-
-| Lever | Left (1) | Right (5) |
-|-------|----------|-----------|
-| Sunshine inside me | Low | High |
-| School weather | Stormy | Bright |
-| Fun with others | Alone | Belonging |
-| Calm in body | Worries | Butterflies |
-| Hope light | Weak | Strong |
-
-**For engineering:**
-- Persist lever values per user per day
-- Calculate similarity score for Step 2 matching
-- No text input fields on this screen
+### כן לעשות
+1. **לעולם לא להשאיר משתמש תלוי** — כל פעולה מקבלת תגובה.
+2. **להראות להם שהם לא לבד** — אחרים מרגישים ככה גם.
+3. **לתת תקווה** — דברים יכולים להשתנות.
+4. **להזמין חיבור בטוח** — אינטראקציה בין משתמשים שנשארת חיובית.
 
 ---
 
-#### Step 2 — You're Not Alone
+## מסכים
 
-Immediate emotional validation: a real-time count of other kids feeling similarly. Around the count, a cluster of **stickers** (hobbies, interests, characters) sampled from similar-feeling peers—personalizing the connection without revealing identity. No names, no faces, no schools.
+**ניווט אחיד באפליקציה:** כל המסכים חולקים את אותו סרגל ניווט תחתון עם ארבע לשוניות (מימין לשמאל: פתיחה · מה אומרים? · סוף שמח · הצמח). הלשונית הפעילה מודגשת בהתאם למסך הנוכחי. במסכי הפתיחה הלשונית פתיחה פעילה.
 
-**Two anonymous actions** available directly from this screen:
-- **Group Hug** — send a hug to everyone in the similar-feeling cohort at once
-- **Random Gift** — send a unique gift to one random kid from the cohort
+### תהליך פתיחה · פתיחה
 
-Both actions are anonymous; recipients never know who sent.
+תהליך צ'ק-אין יומי (3 שלבים). ללא טקסט חופשי — רק קלטים מובנים שבטוחים מעצם התכנון.
 
-![Welcome Step 2 — Anonymous Peer Count](mocks/annotated/welcome-step2-annotated.png)
+#### שלב 1 — איך אני מרגיש
 
-**For engineering:**
-- Query users with similar lever profiles (threshold TBD in Open Questions)
-- Display anonymized count + random sticker sample from matching cohort
-- Minimum cohort size floor to protect small groups
-- Group hug: broadcast to all matching users
-- Random gift: select one random user from cohort, deliver gift anonymously
+ילדים מבטאים את מצבם הרגשי באמצעות חמישה מחוונים. כל מחוון משתמש בסקאלה של 1–5 עם קטבים אינטואיטיביים: שלילי משמאל, חיובי מימין. עוגנים ויזואליים (אייקוני אימוג'י) הופכים רגשות מופשטים למוחשיים עבור ילדים.
 
----
+![שלב 1 בפתיחה — מחווני רגשות](mocks/annotated/welcome-step1-annotated.png)
 
-#### Step 3 — Spread Love
+| מחוון | שמאל (1) | ימין (5) |
+|-------|----------|----------|
+| השמש בתוכי זורחת | נמוך | גבוה |
+| מזג אוויר בבית הספר | סוער | בהיר |
+| כיף עם אחרים | לבד | שייך |
+| רגוע בגוף | חששות | פרפרים |
+| אור של תקווה | חלש | חזק |
 
-Two currencies enable kids to send kindness without DMs or direct contact:
-
-1. **Hugs** — fungible balance; can send hugs to everyone in the similar-feeling cohort at once
-2. **Unique Icons** — one-time collectible gifts grown from My Plant fruits
-
-Recipients learn only that someone cared—not who sent it.
-
-![Welcome Step 3 — Spread Love](mocks/annotated/welcome-step3-annotated.png)
-
-**For engineering:**
-- Deduct hugs from sender balance on send
-- Broadcast to all users in matching cohort
-- Unique icons are single-use; remove from sender inventory on gift
+**להנדסה:**
+- לשמור ערכי מחוונים למשתמש ליום
+- לחשב ציון דמיון עבור התאמה בשלב 2
+- אין שדות קלט טקסט במסך זה
 
 ---
 
-### What do they say? · מה אומרים?
+#### שלב 2 — אתה לא לבד
 
-Safe peer engagement through image-based polls. Kids ask questions with 3–4 photo options; others vote by tapping one image. No typed replies, no comments, no DMs—just visual choices.
+אישור רגשי מיידי: ספירה בזמן אמת של ילדים אחרים שמרגישים בדומה. סביב הספירה, אשכול **מדבקות** (תחביבים, תחומי עניין, דמויות) שנדגמו מילדים עם רגשות דומים — מאפשרות חיבור אישי בלי לחשוף זהות. בלי שמות, בלי פרצופים, בלי בתי ספר.
 
-![What do they say? — Image Polls](mocks/annotated/what-do-they-say-annotated.png)
+**שתי פעולות אנונימיות** זמינות ישירות מהמסך:
+- **חיבוק לכולם** — שליחת חיבוק לכל מי שמרגיש דומה בו-זמנית
+- **מתנה למישהו** — שליחת מתנה ייחודית לילד אקראי אחד מהקבוצה
 
-**Top controls:**
-- **New Question** — create an image-based poll
-- **My Questions** — view your posted questions and incoming votes (accessed from main screen, no separate mock)
+שתי הפעולות אנונימיות; המקבלים לעולם לא יודעים מי שלח.
 
-**For engineering:**
-- Store question text + 3–4 image URLs per poll
-- One vote per user per question
-- Aggregate vote counts; no voter identity exposed
+![שלב 2 בפתיחה — ספירת עמיתים אנונימית](mocks/annotated/welcome-step2-annotated.png)
 
----
-
-### Happy Ending · סוף שמח
-
-Share what happened anonymously. Receive hopeful endings from peers. Stories get better here.
-
-![Happy Ending — Anonymous Stories](mocks/annotated/happy-ending-annotated.png)
-
-- **Anonymous sharing** — tell your story without revealing identity
-- **Suggest happy endings** — contribute hope to someone else's story
-- **Send hugs** — emotional support as reaction
-- Stories saved privately on the author's My Plant profile
-
-**For engineering:**
-- Stories stored with author reference (not exposed in UI)
-- Endings linked to parent story
-- Hug count per story; notify author on new endings
+**להנדסה:**
+- שאילתה למשתמשים עם פרופיל מחוונים דומה (סף להגדרה בשאלות פתוחות)
+- הצגת ספירה אנונימית + דגימת מדבקות אקראית מהקבוצה המתאימה
+- רצפת גודל קבוצה מינימלי להגנה על קבוצות קטנות
+- חיבוק קבוצתי: שידור לכל המשתמשים המתאימים
+- מתנה אקראית: בחירת משתמש אקראי אחד מהקבוצה, מסירת מתנה באופן אנונימי
 
 ---
 
-### My Plant · הצמח שלי
+#### שלב 3 — הפיצו אהבה
 
-Profile as a growing plant. Every engagement waters it—yours and others' kindness toward you.
+שני מטבעות מאפשרים לילדים לשלוח חמימות בלי הודעות ישירות או קשר ישיר:
 
-![My Plant — Living Profile](mocks/annotated/my-plant-annotated.png)
+1. **חיבוקים** — יתרה משותפת; אפשר לשלוח חיבוקים לכולם בקבוצה עם רגשות דומים בבת אחת
+2. **אייקונים ייחודיים** — מתנות חד-פעמיות שגודלו מפירות הצמח שלי
 
-**Plant visual:**
-- Plant art blends into UI (no rectangular photo frame)
-- Starts small so growth/evolution is visible over time
-- Growth stage reflects cumulative engagement
+המקבלים לומדים רק שמישהו דאג — לא מי שלח.
 
-**Identity stickers:** The pot holds stickers (city, character, hobby) that personalize without revealing who you are—same visual language as the peer stickers on Step 2.
+![שלב 3 בפתיחה — הפיצו אהבה](mocks/annotated/welcome-step3-annotated.png)
 
-**Hugs received:** Total count displayed prominently.
-
-**Fruit inventories:**
-1. **Grown by my plant** — unique items you cultivated; can gift to others
-2. **Received as gifts** — can also re-gift to others
-
-**For engineering:**
-- Track growth points per user (actions TBD in Open Questions)
-- Sticker selection stored per user
-- Fruit ownership table with "grown" vs "received" flag
+**להנדסה:**
+- הפחתת חיבוקים מיתרת השולח בשליחה
+- שידור לכל המשתמשים בקבוצה המתאימה
+- אייקונים ייחודיים הם חד-פעמיים; הסרה ממלאי השולח במתנה
 
 ---
 
-## Raw Mocks
+### מה אומרים? · מה אומרים?
 
-Original phone screenshots (Hebrew UI) are available under `mocks/` for engineering reference:
+מעורבות בטוחה עם עמיתים דרך סקרים מבוססי תמונות. ילדים שואלים שאלות עם 3–4 אפשרויות תמונה; אחרים מצביעים בהקשה על תמונה אחת. ללא תגובות מוקלדות, ללא תגובות, ללא הודעות פרטיות — רק בחירות ויזואליות.
 
-| Screen | File |
-|--------|------|
-| Welcome Step 1 | `mocks/welcome-screen.png` |
-| Welcome Step 2 | `mocks/welcome-not-alone.png` |
-| Welcome Step 3 | `mocks/welcome-gift.png` |
-| What do they say? | `mocks/what-do-they-say.png` |
-| Happy Ending | `mocks/happy-ending.png` |
-| My Plant | `mocks/my-plant.png` |
+![מה אומרים? — סקרי תמונות](mocks/annotated/what-do-they-say-annotated.png)
+
+**פקדים עליונים:**
+- **שאלה חדשה** — יצירת סקר מבוסס תמונות
+- **השאלות שלי** — צפייה בשאלות שפרסמת ובהצבעות הנכנסות (נגיש מהמסך הראשי, ללא מוקאפ נפרד)
+
+**להנדסה:**
+- אחסון טקסט שאלה + 3–4 כתובות URL של תמונות לכל סקר
+- הצבעה אחת למשתמש לשאלה
+- צבירת ספירות הצבעות; זהות המצביע לא נחשפת
 
 ---
 
-## Open Questions
+### סוף שמח · סוף שמח
 
-See [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md) for decisions still to be made.
+שיתוף מה שקרה באנונימיות. קבלת סופים מלאי תקווה מעמיתים. סיפורים נהיים טובים יותר כאן.
+
+![סוף שמח — סיפורים אנונימיים](mocks/annotated/happy-ending-annotated.png)
+
+- **שיתוף אנונימי** — ספרו את הסיפור שלכם בלי לחשוף זהות
+- **הצעת סוף שמח** — תרמו תקווה לסיפור של מישהו אחר
+- **שליחת חיבוקים** — תמיכה רגשית כתגובה
+- סיפורים נשמרים באופן פרטי בפרופיל הצמח שלי של הכותב
+
+**להנדסה:**
+- סיפורים מאוחסנים עם הפניה לכותב (לא נחשפת בממשק)
+- סופים מקושרים לסיפור האב
+- ספירת חיבוקים לסיפור; התראה לכותב על סופים חדשים
+
+---
+
+### הצמח שלי · הצמח שלי
+
+פרופיל כצמח צומח. כל מעורבות משקה אותו — החמימות שלכם ושל אחרים כלפיכם.
+
+![הצמח שלי — פרופיל חי](mocks/annotated/my-plant-annotated.png)
+
+**ויזואל הצמח:**
+- אמנות הצמח משתלבת בממשק (ללא מסגרת תמונה מלבנית)
+- מתחיל קטן כדי שצמיחה/התפתחות תהיה גלויה לאורך זמן
+- שלב הצמיחה משקף מעורבות מצטברת
+
+**מדבקות זהות:** העציץ מכיל מדבקות (עיר, דמות, תחביב) שמאפשרות התאמה אישית בלי לחשוף מי אתם — אותה שפה ויזואלית כמו מדבקות העמיתים בשלב 2.
+
+**חיבוקים שהתקבלו:** ספירה כוללת מוצגת בבולטות.
+
+**מלאי פירות:**
+1. **גודלו בצמח שלי** — פריטים ייחודיים שטיפחתם; ניתן להעניק לאחרים
+2. **התקבלו כמתנות** — ניתן גם להעביר הלאה לאחרים
+
+**להנדסה:**
+- מעקב אחר נקודות צמיחה למשתמש (פעולות להגדרה בשאלות פתוחות)
+- בחירת מדבקות מאוחסנת למשתמש
+- טבלת בעלות פירות עם דגל "גודל" לעומת "התקבל"
+
+---
+
+## מוקאפים גולמיים
+
+צילומי מסך מקוריים של הטלפון (ממשק בעברית) זמינים תחת `mocks/` לעיון הנדסי:
+
+| מסך | קובץ |
+|-----|------|
+| פתיחה שלב 1 | `mocks/welcome-screen.png` |
+| פתיחה שלב 2 | `mocks/welcome-not-alone.png` |
+| פתיחה שלב 3 | `mocks/welcome-gift.png` |
+| מה אומרים? | `mocks/what-do-they-say.png` |
+| סוף שמח | `mocks/happy-ending.png` |
+| הצמח שלי | `mocks/my-plant.png` |
+
+---
+
+## שאלות פתוחות
+
+ראו [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md) להחלטות שעדיין צריך לקבל.

@@ -1,93 +1,93 @@
-# Open Questions
+# שאלות פתוחות
 
-The following decisions are not yet finalized and require further discussion.
+ההחלטות הבאות טרם סוכמו ודורשות דיון נוסף.
 
-> Note: v1 UI is Hebrew; mocks reflect Hebrew copy.
-
----
-
-## Navigation & Information Architecture
-
-- **Post-welcome landing:** What screen does the user see after completing the Welcome screen?
-- **Full in-app navigation:** How do users move between screens? What's the primary navigation model?
-- **Information architecture:** How are features organized and discovered?
+> הערה: ממשק v1 בעברית; המוקאפים משקפים טקסט בעברית.
 
 ---
 
-## Welcome Screen Content
+## ניווט וארכיטקטורת מידע
 
-### Step 1 — Levers
-- **Lever set for v1:** Which of the 5 levers ship in v1? Is 5 too many for kids under 10?
-- **Labels and icons:** Exact wording and visual endpoints for each lever
-- **Personalization:** Do lever defaults or ranges adapt based on previous check-ins?
-
-### Step 2 — You're Not Alone
-- **Similarity matching:** How are "similar feelings" calculated from lever positions?
-- **Minimum cohort size:** What's the minimum number of similar kids before showing a count? (Privacy floor to avoid identifying small groups)
-- **Geographic scope:** Same city? Same region? Global?
-
-### Step 3 — Spread Love
-- **Hug economy:** How do users accumulate hugs? Starting balance? Earn rate?
-- **Hug spending:** When sending hugs to a similar-feeling cohort, how many hugs are spent?
-- **Unique icons (NFT-like):** How are unique icons generated? From My Plant fruits only, or other sources?
-- **Group-broadcast only:** Are hugs/icons always sent to an anonymous group, or can they ever target individuals?
-- **Rate limits:** How often can a child send hugs/icons? (Prevent spam, ensure gifts feel meaningful)
-- **Receiving:** How/when do kids see hugs or icons others sent to their cohort?
+- **נחיתה אחרי פתיחה:** איזה מסך המשתמש רואה אחרי סיום מסך הפתיחה?
+- **ניווט מלא באפליקציה:** איך משתמשים עוברים בין מסכים? מה מודל הניווט העיקרי?
+- **ארכיטקטורת מידע:** איך פיצ'רים מאורגנים ומגלים אותם?
 
 ---
 
-## What do they say? & Community Model
+## תוכן מסך הפתיחה
 
-- **Single vs. multiple communities:** Is there one global community, or can users join/create multiple communities?
-- **Community joining:** How do kids discover and join communities?
-- **Community scope:** Are communities geographic, interest-based, age-based, or something else?
-- **Feed visibility:** Who sees a question? Everyone, or just the asker's community/circle?
+### שלב 1 — מחוונים
+- **סט מחוונים ל-v1:** אילו מ-5 המחוונים יוצאים ב-v1? האם 5 זה יותר מדי לילדים מתחת לגיל 10?
+- **תוויות ואייקונים:** ניסוח מדויק ונקודות קצה ויזואליות לכל מחוון
+- **התאמה אישית:** האם ברירות מחדל או טווחי מחוונים מותאמים בהתבסס על צ'ק-אינים קודמים?
 
----
+### שלב 2 — אתה לא לבד
+- **התאמת דמיון:** איך מחושבים "רגשות דומים" ממיקומי המחוונים?
+- **גודל קבוצה מינימלי:** מה המספר המינימלי של ילדים דומים לפני הצגת ספירה? (רצפת פרטיות למניעת זיהוי קבוצות קטנות)
+- **היקף גיאוגרפי:** אותה עיר? אותו אזור? גלובלי?
 
-## Parental Involvement
-
-- **Parent/guardian role:** Do parents have visibility or control over their child's account?
-- **Consent flow:** How is parental consent obtained for users under 10?
-- **Parent notifications:** Are parents notified of any activity or content?
-
----
-
-## Content Moderation
-
-- **Question moderation:** How is question text and image content moderated before appearing in the feed?
-- **Image count:** Should questions allow 3 or 4 images per question?
-- **Reporting mechanism:** How can users report concerning content?
-- **Moderation team:** Who moderates content and how quickly?
+### שלב 3 — הפיצו אהבה
+- **כלכלת חיבוקים:** איך משתמשים צוברים חיבוקים? יתרת התחלה? קצב צבירה?
+- **הוצאת חיבוקים:** כששולחים חיבוקים לקבוצה עם רגשות דומים, כמה חיבוקים מוצאים?
+- **אייקונים ייחודיים (דמויי NFT):** איך אייקונים ייחודיים נוצרים? רק מפירות הצמח שלי, או ממקורות אחרים?
+- **שידור קבוצתי בלבד:** האם חיבוקים/אייקונים תמיד נשלחים לקבוצה אנונימית, או שהם יכולים לפעמים לכוון ליחידים?
+- **מגבלות קצב:** כמה פעמים ילד יכול לשלוח חיבוקים/אייקונים? (מניעת ספאם, הבטחה שמתנות מרגישות משמעותיות)
+- **קבלה:** איך/מתי ילדים רואים חיבוקים או אייקונים שאחרים שלחו לקבוצה שלהם?
 
 ---
 
-## Happy Ending
+## מה אומרים? ומודל קהילה
 
-- **Story moderation:** How are stories reviewed for harmful content before appearing in the feed?
-- **Ending moderation:** How are suggested endings moderated? Same flow as stories?
-- **Ending anonymity:** Are endings also anonymous, or do they show a first name / avatar?
-- **Hug rate limits:** How often can a user send hugs? (Prevent spam, keep hugs meaningful)
-- **My Stories on My Plant:** How does the user view and manage their own stories on their plant profile?
-- **Notification copy:** What do notifications say when someone suggests an ending? Tone and wording for kids.
+- **קהילה אחת או מספר קהילות:** האם יש קהילה גלובלית אחת, או שמשתמשים יכולים להצטרף/ליצור קהילות מרובות?
+- **הצטרפות לקהילה:** איך ילדים מגלים ומצטרפים לקהילות?
+- **היקף קהילה:** האם קהילות הן גיאוגרפיות, מבוססות עניין, מבוססות גיל, או משהו אחר?
+- **נראות פיד:** מי רואה שאלה? כולם, או רק הקהילה/המעגל של השואל?
 
 ---
 
-## My Plant
+## מעורבות הורית
 
-- **What counts as "water":** Which actions water the plant? Check-ins, votes, hugs sent, hugs received, endings written, endings received?
-- **Growth stages:** How many stages does the plant have? What visual changes at each stage?
-- **Fruit uniqueness:** How are fruits made unique app-wide? Generated per-user? Limited pool with first-come assignment?
-- **Fruit catalog:** What types of fruits exist? How many can a user grow?
-- **Grown vs received UX:** How are the two fruit inventories displayed? Can users tell which fruits they grew vs received?
-- **Gifting surfaces:** Where can users gift their fruits? Only Happy Ending? Also Welcome Step 3? Random matching?
-- **Fruit recipient experience:** How does the recipient see/receive a gifted fruit? Notification? On their plant?
-- **Profile stickers catalog:** What stickers are available? Categories (city, character, hobby)?
-- **Sticker moderation:** How are custom stickers or user-selected stickers moderated?
-- **City emblem sources:** Where do city emblems come from? Pre-loaded set? User-submitted?
+- **תפקיד הורה/אפוטרופוס:** האם להורים יש נראות או שליטה על חשבון הילד שלהם?
+- **תהליך הסכמה:** איך מתקבלת הסכמת הורים למשתמשים מתחת לגיל 10?
+- **התראות להורים:** האם הורים מקבלים התראה על פעילות או תוכן כלשהם?
 
 ---
 
-## Mockups Still to Be Designed
+## מיתון תוכן
 
-- **Post-Welcome Landing** — Home screen after the Welcome screen (design pending decision on navigation)
+- **מיתון שאלות:** איך טקסט שאלות ותוכן תמונות ממותנים לפני הופעה בפיד?
+- **מספר תמונות:** האם שאלות צריכות לאפשר 3 או 4 תמונות לשאלה?
+- **מנגנון דיווח:** איך משתמשים יכולים לדווח על תוכן מדאיג?
+- **צוות מיתון:** מי ממתן תוכן ובאיזו מהירות?
+
+---
+
+## סוף שמח
+
+- **מיתון סיפורים:** איך סיפורים נבדקים לתוכן מזיק לפני הופעה בפיד?
+- **מיתון סופים:** איך סופים מוצעים ממותנים? אותו תהליך כמו סיפורים?
+- **אנונימיות סופים:** האם סופים גם אנונימיים, או שהם מציגים שם פרטי/אווטאר?
+- **מגבלות קצב חיבוקים:** כמה פעמים משתמש יכול לשלוח חיבוקים? (מניעת ספאם, שמירה על משמעות חיבוקים)
+- **הסיפורים שלי בצמח שלי:** איך המשתמש צופה ומנהל את הסיפורים שלו בפרופיל הצמח?
+- **טקסט התראות:** מה ההתראות אומרות כשמישהו מציע סוף? טון וניסוח לילדים.
+
+---
+
+## הצמח שלי
+
+- **מה נחשב "השקיה":** אילו פעולות משקות את הצמח? צ'ק-אינים, הצבעות, חיבוקים שנשלחו, חיבוקים שהתקבלו, סופים שנכתבו, סופים שהתקבלו?
+- **שלבי צמיחה:** כמה שלבים יש לצמח? אילו שינויים ויזואליים בכל שלב?
+- **ייחודיות פירות:** איך פירות נעשים ייחודיים באפליקציה כולה? נוצרים למשתמש? מאגר מוגבל עם הקצאת כל הקודם זוכה?
+- **קטלוג פירות:** אילו סוגי פירות קיימים? כמה משתמש יכול לגדל?
+- **חוויית גודלו לעומת התקבלו:** איך שני מלאי הפירות מוצגים? האם משתמשים יכולים להבדיל בין פירות שגידלו לפירות שקיבלו?
+- **משטחי מתן מתנות:** איפה משתמשים יכולים להעניק את הפירות שלהם? רק בסוף שמח? גם בפתיחה שלב 3? התאמה אקראית?
+- **חוויית מקבל פרי:** איך המקבל רואה/מקבל פרי שהוענק? התראה? על הצמח שלו?
+- **קטלוג מדבקות פרופיל:** אילו מדבקות זמינות? קטגוריות (עיר, דמות, תחביב)?
+- **מיתון מדבקות:** איך מדבקות מותאמות אישית או שנבחרו על ידי המשתמש ממותנות?
+- **מקורות סמלי ערים:** מאיפה סמלי ערים מגיעים? סט טעון מראש? הגשת משתמשים?
+
+---
+
+## מוקאפים שעדיין צריך לעצב
+
+- **נחיתה אחרי פתיחה** — מסך הבית אחרי מסך הפתיחה (עיצוב ממתין להחלטה על ניווט)
