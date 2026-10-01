@@ -1,0 +1,19 @@
+name: PostgreSQL data model
+on:
+  pull_request:
+    paths: ["db/**", "compose.yaml", ".github/workflows/database.yml"]
+  push:
+    branches: [main]
+    paths: ["db/**", "compose.yaml", ".github/workflows/database.yml"]
+jobs:
+  database:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose up -d --wait postgres
+      - run: docker compose run --rm db-tools
+      - name: Verify migrations can be rerun
+        run: docker compose run --rm db-tools
+      - run: docker compose run --rm db-tools -f /db/tests.sql
+      - if: always()
+        run: docker compose down -v
