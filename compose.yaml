@@ -1,0 +1,34 @@
+name: feelit
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: feelit
+      POSTGRES_USER: feelit
+      POSTGRES_PASSWORD: feelit-local-only
+    ports:
+      - "127.0.0.1:${FEELIT_DB_PORT:-5433}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U feelit -d feelit"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+  db-tools:
+    image: postgres:18
+    profiles: [tools]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGHOST: postgres
+      PGDATABASE: feelit
+      PGUSER: feelit
+      PGPASSWORD: feelit-local-only
+    volumes:
+      - ./db:/db:ro
+    entrypoint: [psql, -X, --set, ON_ERROR_STOP=1]
+    command: [-f, /db/migrate.sql]
+volumes:
+  postgres-data:

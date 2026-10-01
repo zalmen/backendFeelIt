@@ -1,5 +1,11 @@
 # FeelIt
 
+## Database foundation
+
+The new app's PostgreSQL schema, local setup and model overview are in
+[db/README.md](db/README.md). The existing `server/` remains a separate MongoDB
+prototype until the new APIs are implemented.
+
 **מרחב בטוח לתלמידי בית ספר יסודי שחוו בריונות.** FeelIt עוזרת לילדים לבטא רגשות קשים, לראות שהם לא לבד, ולקבל חמימות מילדים אחרים — בלי הסיכונים של אינטראקציה חברתית פתוחה.
 
 > ממשק v1 בעברית. המוקאפים מציגים את הממשק בעברית. הממשק עשוי להשתמש בפנייה בזכר או בנקבה באופן אקראי בין מסכים (לא רק ניסוח ניטרלי).
