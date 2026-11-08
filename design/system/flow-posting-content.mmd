@@ -1,0 +1,14 @@
+%% Posting a story, ending, poll or image: automatic safety check before it goes live.
+sequenceDiagram
+    participant K as Kids web app
+    participant A as Kids API
+    participant D as PostgreSQL
+    participant T as Cloud Tasks
+    participant S as Safety check
+    K->>A: POST /api/stories {body}
+    A->>D: insert with status = checking
+    A->>T: queue a check job
+    A-->>K: "sending…"
+    T->>A: POST /internal/safety-check {content_type, id}
+    A->>S: classify the text or image
+    A->>D: status = published, or hidden with hidden_reason = safety_check

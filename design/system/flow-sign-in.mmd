@@ -1,0 +1,14 @@
+%% First sign-in with the teacher's code, then signing in again with code plus PIN.
+sequenceDiagram
+    participant K as Kids web app
+    participant A as Kids API
+    participant D as PostgreSQL
+    K->>A: POST /api/auth/redeem {code}
+    A->>D: code is issued and not expired, create child and plant, mark code redeemed
+    A-->>K: session cookie, ask the kid to choose a PIN
+    K->>A: POST /api/auth/pin {pin}
+    A->>D: store the PIN hash
+    Note over K,A: Later, on a cleared or new browser
+    K->>A: POST /api/auth/sign-in {code, pin}
+    A->>D: compare PIN hash, count failures, lock after 5
+    A-->>K: new session cookie, or "ask your teacher for a new code"
