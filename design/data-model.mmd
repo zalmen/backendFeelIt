@@ -1,0 +1,230 @@
+%% FeelIt v1 data model (proposal, Nov 2026).
+%% Based on the screen mocks in mocks/nov2026-current and the product decisions from the data-model review.
+%% Render with any Mermaid viewer, e.g. https://mermaid.live or the GitHub file preview.
+erDiagram
+    CITY ||--o{ SCHOOL : "located in"
+    CITY ||--o{ CHILD : "lives in"
+    SCHOOL ||--o{ TEACHER : employs
+    SCHOOL ||--o{ CHILD : supervises
+    TEACHER ||--o{ ACCESS_CODE : issues
+    CHILD ||--o{ ACCESS_CODE : "activated or relinked by"
+    CHILD ||--o{ DEVICE_SESSION : "signed in on"
+    CHILD ||--o{ NOTIFICATION : gets
+
+    CHILD ||--|| PLANT : "is represented by"
+    PLANT ||--o{ GROWTH_EVENT : "watered by"
+    CHILD ||--o{ PROFILE_STICKER : "decorates pot with"
+    STICKER ||--o{ PROFILE_STICKER : ""
+
+    CHILD ||--o{ CHECK_IN : "one per day"
+    CHECK_IN ||--|{ SLIDER_ANSWER : contains
+    SLIDER ||--o{ SLIDER_ANSWER : ""
+
+    CHILD ||--o{ HUG : sends
+    HUG ||--|{ HUG_RECEIPT : "fans out to"
+    CHILD ||--o{ HUG_RECEIPT : receives
+
+    FRUIT_TYPE ||--o{ FRUIT : "instance of"
+    CHILD ||--o{ FRUIT : "owns (single owner)"
+    FRUIT ||--o{ FRUIT_TRANSFER : "gift history"
+
+    CHILD ||--o{ POLL : asks
+    POLL ||--|{ POLL_OPTION : "3-4 options"
+    IMAGE ||--o{ POLL_OPTION : "shown in"
+    CHILD ||--o{ IMAGE : uploads
+    POLL_OPTION ||--o{ POLL_VOTE : ""
+    CHILD ||--o{ POLL_VOTE : "one per poll"
+
+    CHILD ||--o{ STORY : writes
+    STORY ||--o{ ENDING : "receives suggestions"
+    CHILD ||--o{ ENDING : proposes
+
+    CHILD ||--o{ REPORT : files
+
+    CITY {
+        uuid id PK
+        string name
+        uuid sticker_id FK "city sticker"
+    }
+    SCHOOL {
+        uuid id PK
+        uuid city_id FK
+        string name
+    }
+    TEACHER {
+        uuid id PK
+        uuid school_id FK
+        string name
+        string email
+    }
+    ACCESS_CODE {
+        string code PK
+        uuid teacher_id FK
+        string purpose "activate | relink"
+        uuid child_id FK "set on redeem; preset for relink"
+        string status "issued | redeemed | revoked"
+        datetime expires_at
+    }
+    CHILD {
+        uuid id PK
+        uuid school_id FK
+        uuid city_id FK
+        string first_name
+        int birth_year
+        string gender
+        datetime created_at
+    }
+    DEVICE_SESSION {
+        uuid id PK
+        uuid child_id FK
+        string token_hash
+        string push_token
+        datetime last_seen_at
+        datetime revoked_at
+    }
+    NOTIFICATION {
+        uuid id PK
+        uuid child_id FK
+        string kind "hug_received | ending_suggested | fruit_received"
+        string ref_type
+        uuid ref_id
+        datetime pushed_at
+        datetime read_at
+    }
+    PLANT {
+        uuid child_id PK
+        int stage
+        int water_points
+        int hugs_received_total "shown on plant and Spread love"
+    }
+    GROWTH_EVENT {
+        uuid id PK
+        uuid child_id FK
+        string action "check_in | vote | hug_sent | hug_received | story | ending"
+        int water_delta
+        datetime at
+    }
+    STICKER {
+        uuid id PK
+        string category "city | character | hobby"
+        string name
+        string image_ref
+    }
+    PROFILE_STICKER {
+        uuid child_id FK
+        uuid sticker_id FK
+        int position
+    }
+    SLIDER {
+        uuid id PK
+        string label
+        string low_label
+        string high_label
+        string icon
+        bool active
+    }
+    CHECK_IN {
+        uuid id PK
+        uuid child_id FK
+        date local_date "unique with child_id"
+        datetime updated_at
+    }
+    SLIDER_ANSWER {
+        uuid check_in_id FK
+        uuid slider_id FK
+        int value "1-5"
+    }
+    HUG {
+        uuid id PK
+        uuid sender_id FK
+        string target_type "similar_kids | story | ending | poll"
+        uuid target_id "null for similar_kids"
+        datetime sent_at
+    }
+    HUG_RECEIPT {
+        uuid hug_id FK
+        uuid recipient_id FK
+    }
+    FRUIT_TYPE {
+        uuid id PK
+        string name
+        string image_ref
+    }
+    FRUIT {
+        uuid id PK
+        uuid fruit_type_id FK
+        uuid grown_by_id FK
+        uuid owner_id FK
+        string state "growing | ripe"
+    }
+    FRUIT_TRANSFER {
+        uuid id PK
+        uuid fruit_id FK
+        uuid from_id FK
+        uuid to_id FK
+        string context "similar_kids_gift | story | ending"
+        datetime at
+    }
+    IMAGE {
+        uuid id PK
+        string source "library | upload"
+        uuid uploaded_by FK
+        string storage_ref
+        string status "published | hidden"
+        int report_count
+    }
+    POLL {
+        uuid id PK
+        uuid author_id FK
+        string question
+        string status "published | hidden"
+        int report_count
+    }
+    POLL_OPTION {
+        uuid id PK
+        uuid poll_id FK
+        uuid image_id FK
+        int position
+        string label
+        int vote_count "cached"
+    }
+    POLL_VOTE {
+        uuid poll_id FK
+        uuid child_id FK "unique with poll_id"
+        uuid option_id FK
+    }
+    STORY {
+        uuid id PK
+        uuid author_id FK
+        text body
+        string status "published | hidden"
+        int report_count
+    }
+    ENDING {
+        uuid id PK
+        uuid story_id FK
+        uuid author_id FK
+        text body
+        string status "published | hidden"
+        int report_count
+    }
+    REPORT {
+        uuid id PK
+        uuid reporter_id FK
+        string content_type "poll | story | ending | image"
+        uuid content_id "unique with reporter_id"
+        string reason "hurtful | personal_info | scary | other"
+        datetime at
+    }
+    HELP_LINE {
+        uuid id PK
+        string region
+        string need
+        string organization
+        string phone
+        date verified_at
+    }
+    APP_SETTING {
+        string key PK
+        string value
+    }
