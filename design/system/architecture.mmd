@@ -1,0 +1,38 @@
+%% FeelIt v1 system architecture (proposal, Nov 2026).
+%% Web app (installable PWA, no notifications), Python API, Google Cloud Tel Aviv.
+flowchart LR
+    KID["Kids' phones<br/>browser or home-screen icon"]
+    STAFF["NGO staff<br/>browser"]
+
+    subgraph GCP["Google Cloud, Tel Aviv region (me-west1)"]
+        subgraph PUBLIC["feelit-app (Cloud Run, public)"]
+            KWEB["Kids web app<br/>React, static files"]
+            KAPI["Kids API<br/>FastAPI"]
+        end
+        IAP["Identity-Aware Proxy<br/>Google sign-in"]
+        subgraph PRIVATE["feelit-admin (Cloud Run, staff only)"]
+            AWEB["Admin web app<br/>React"]
+            AAPI["Admin API<br/>FastAPI"]
+        end
+        DB[("PostgreSQL<br/>Cloud SQL")]
+        GCS[("Images<br/>private Cloud Storage bucket")]
+        TASKS["Cloud Tasks<br/>safety-check jobs"]
+        SCHED["Cloud Scheduler<br/>daily check-in purge"]
+        SAFE["Safety checks<br/>Vision SafeSearch for images<br/>text classifier for Hebrew"]
+        SECRETS["Secret Manager"]
+        LOGS["Cloud Logging and<br/>Error Reporting"]
+    end
+
+    KID -- "HTTPS, session cookie" --> PUBLIC
+    KID -- "upload and view via short-lived link" --> GCS
+    STAFF --> IAP --> PRIVATE
+    KAPI --> DB
+    AAPI --> DB
+    KAPI -- "create upload link" --> GCS
+    KAPI --> TASKS --> KAPI
+    KAPI --> SAFE
+    SCHED --> KAPI
+    PUBLIC --> SECRETS
+    PRIVATE --> SECRETS
+    PUBLIC --> LOGS
+    PRIVATE --> LOGS

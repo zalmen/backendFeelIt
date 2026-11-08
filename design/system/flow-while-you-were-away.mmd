@@ -1,0 +1,10 @@
+%% Opening the app: the "while you were away" card replaces notifications.
+sequenceDiagram
+    participant K as Kids web app
+    participant A as Kids API
+    participant D as PostgreSQL
+    K->>A: GET /api/me/summary
+    A->>D: hug receipts, gifts received and endings on my stories since last_summary_seen_at
+    A-->>K: {hugs: 5, gifts: 1, endings: 2}
+    K->>A: POST /api/me/summary/seen
+    A->>D: set last_summary_seen_at = now

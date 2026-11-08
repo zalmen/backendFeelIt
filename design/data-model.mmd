@@ -9,7 +9,6 @@ erDiagram
     TEACHER ||--o{ ACCESS_CODE : issues
     CHILD ||--o{ ACCESS_CODE : "activated or relinked by"
     CHILD ||--o{ DEVICE_SESSION : "signed in on"
-    CHILD ||--o{ NOTIFICATION : gets
 
     CHILD ||--|| PLANT : "is represented by"
     PLANT ||--o{ GROWTH_EVENT : "watered by"
@@ -58,7 +57,7 @@ erDiagram
         string email
     }
     ACCESS_CODE {
-        string code PK
+        string code PK "after redeem, also the kid's sign-in name"
         uuid teacher_id FK
         string purpose "activate | relink"
         uuid child_id FK "set on redeem; preset for relink"
@@ -72,24 +71,18 @@ erDiagram
         string first_name
         int birth_year
         string gender
+        string pin_hash "6-digit PIN, hashed"
+        int failed_pin_attempts
+        datetime locked_until
+        datetime last_summary_seen_at "while you were away"
         datetime created_at
     }
     DEVICE_SESSION {
         uuid id PK
         uuid child_id FK
-        string token_hash
-        string push_token
+        string token_hash "session cookie"
         datetime last_seen_at
         datetime revoked_at
-    }
-    NOTIFICATION {
-        uuid id PK
-        uuid child_id FK
-        string kind "hug_received | ending_suggested | fruit_received"
-        string ref_type
-        uuid ref_id
-        datetime pushed_at
-        datetime read_at
     }
     PLANT {
         uuid child_id PK
@@ -170,14 +163,16 @@ erDiagram
         string source "library | upload"
         uuid uploaded_by FK
         string storage_ref
-        string status "published | hidden"
+        string status "checking | published | hidden"
+        string hidden_reason "safety_check | reports"
         int report_count
     }
     POLL {
         uuid id PK
         uuid author_id FK
         string question
-        string status "published | hidden"
+        string status "checking | published | hidden"
+        string hidden_reason "safety_check | reports"
         int report_count
     }
     POLL_OPTION {
@@ -197,7 +192,8 @@ erDiagram
         uuid id PK
         uuid author_id FK
         text body
-        string status "published | hidden"
+        string status "checking | published | hidden"
+        string hidden_reason "safety_check | reports"
         int report_count
     }
     ENDING {
@@ -205,7 +201,8 @@ erDiagram
         uuid story_id FK
         uuid author_id FK
         text body
-        string status "published | hidden"
+        string status "checking | published | hidden"
+        string hidden_reason "safety_check | reports"
         int report_count
     }
     REPORT {

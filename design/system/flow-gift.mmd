@@ -1,0 +1,11 @@
+%% Group hug and a fruit gift to a random kid who feels similar.
+sequenceDiagram
+    participant K as Kids web app
+    participant A as Kids API
+    participant D as PostgreSQL
+    K->>A: POST /api/hugs {target_type: similar_kids}
+    A->>D: check rate limit, insert hug and one receipt per similar kid, add to each hugs total
+    A-->>K: sent
+    K->>A: POST /api/gifts {fruit_id}
+    A->>D: in one transaction, lock the fruit row, check the sender owns it, pick a random similar kid, move ownership, record the transfer
+    A-->>K: sent
